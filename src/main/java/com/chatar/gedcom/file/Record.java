@@ -2,6 +2,7 @@ package com.chatar.gedcom.file;
 
 import java.util.Arrays;
 
+import com.chatar.gedcom.exception.ExceptionThrow;
 import com.chatar.gedcom.util.Assumptions;
 
 public class Record {
@@ -9,6 +10,8 @@ public class Record {
 	private String[] tokens;
 	
 	public Record(String lineItem) {
+		ExceptionThrow.runTimeException("Line can't be null", lineItem == null, lineItem == null);
+		lineItem = lineItem.trim();
 		this.tokens = lineItem.split(Assumptions.DELIMITER, 3);
 	}
 	

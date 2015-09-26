@@ -56,7 +56,7 @@ public class Node {
 	}
 	
 	public boolean isleaf() {
-		return childNodes == null;
+		return childNodes.isEmpty();
 	}
 	
 	public int getLevel() {

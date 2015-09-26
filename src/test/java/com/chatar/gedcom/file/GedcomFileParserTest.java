@@ -22,7 +22,6 @@ public class GedcomFileParserTest {
 		List<Entity> entities = parser.parse("GEDCOM Parser Challenge sample data.txt");
 
 		assertThat(entities.size(), equalTo(518));
-		
 		assertThat(entities.get(0).getRecords().size(), equalTo(12));
 	}
 }

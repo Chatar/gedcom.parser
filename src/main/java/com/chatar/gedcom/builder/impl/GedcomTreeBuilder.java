@@ -15,6 +15,7 @@ public class GedcomTreeBuilder implements TreeBuilder {
 
 	public EntityTree build(List<Entity> entities) {
 		ExceptionThrow.runTimeException("Entities can't be null", entities == null);
+		
 		return new EntityTree(Assumptions.ROOT, buildNodesFrom(entities));
 	}
 
@@ -46,6 +47,7 @@ public class GedcomTreeBuilder implements TreeBuilder {
 				parentNode.addChildNode(currentNode);
 			} else if (itsParentNode(currentLevel, previousLevel)) {
 				parentNode = parentNode.parent();
+				currentNode = new Node(parentNode, currentLevel, name, value);
 				parentNode.addChildNode(currentNode);
 			}
 			previousLevel = currentLevel;
