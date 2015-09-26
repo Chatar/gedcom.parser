@@ -1,18 +1,28 @@
 package com.chatar.gedcom.tree;
 
+import java.util.ArrayList;
 import java.util.List;
-
-import com.chatar.gedcom.file.Entity;
 
 public class EntityTree {
 
 	private String root;
-	private List<Node> nodes;
-	private List<Entity> entities;
+	private List<Node> childNodes;
 	
-	public EntityTree(List<Entity> entities) {
-		this.entities = entities;
+	public EntityTree(String root) {
+		this.root = root;
+		this.childNodes = new ArrayList<Node>();
 	}
 	
-	public void 
+	public EntityTree(String root, List<Node> childNodes) {
+		this.root = root;
+		this.childNodes = childNodes;
+	}
+	
+	public String root() {
+		return root;
+	}
+	
+	public List<Node> getChildNodes() {
+		return childNodes;
+	}
 }

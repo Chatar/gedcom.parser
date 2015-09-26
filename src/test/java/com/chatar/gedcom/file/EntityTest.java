@@ -15,15 +15,15 @@ public class EntityTest {
 	@Test
 	public void shouldAbleToAddLineInEntity() {
 		Entity entity = new Entity();
-		entity.addLine("0 @I0001@ INDI").addLine("1 NAME Elizabeth Alexandra Mary /Windsor/");
+		entity.addRecord("0 @I0001@ INDI").addRecord("1 NAME Elizabeth Alexandra Mary /Windsor/");
 		assertThat(entity.size(), is(2));
 	}
 	
 	@Test
 	public void shouldIgnoreNullOrEmptyLine() {
 		Entity entity = new Entity();
-		entity.addLine(null);
-		entity.addLine("");
+		entity.addRecord(null);
+		entity.addRecord("");
 		assertThat(entity.size(), is(0));
 	}
 }

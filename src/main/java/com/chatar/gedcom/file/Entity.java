@@ -7,16 +7,25 @@ import org.apache.commons.lang.StringUtils;
 
 public class Entity {
 
-	private List<String> lines = new LinkedList<String>();
+	private List<Record> records = new LinkedList<Record>();
 			
-	public Entity addLine(String line) {
-		if(StringUtils.isNotEmpty(line)) {
-			lines.add(line);
+	public Entity addRecord(String record) {
+		if(StringUtils.isNotEmpty(record)) {
+			records.add(new Record(record));
 		}
 		return this;
 	}
 	
 	public int size() {
-		return lines.size();
+		return records.size();
+	}
+	
+	public List<Record> getRecords() {
+		return records;
+	}
+
+	@Override
+	public String toString() {
+		return "Entity [records=" + records + "]";
 	}
 }
