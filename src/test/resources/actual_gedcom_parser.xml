@@ -8,9 +8,9 @@
 <PLAC>17 Bruton Street, London, W1</PLAC>
 </BIRT>
 <OCCU>Queen</OCCU>
-<FAMC>@F0003@</FAMC>
-<FAMS>@F0001@</FAMS>
-<NOTE>@N0002@</NOTE>
+<FAMC ID="@F0003@"/>
+<FAMS ID="@F0001@"/>
+<NOTE ID="@N0002@"/>
 <CHAN>
 <DATE>13 Dec 2003</DATE>
 </CHAN>
@@ -22,11 +22,11 @@
 <DATE>1921</DATE>
 </BIRT>
 <TITL>Duke of Edinburgh</TITL>
-<FAMC>@F0002@</FAMC>
-<FAMS>@F0001@</FAMS>
-<NOTE>@N0001@</NOTE>
+<FAMC ID="@F0002@"/>
+<FAMS ID="@F0001@"/>
+<NOTE ID="@N0001@"/>
 <CHAN>
-<DATE> 6 Mar 2004</DATE>
+<DATE>6 Mar 2004</DATE>
 </CHAN>
 </INDI>
 </gedcom>

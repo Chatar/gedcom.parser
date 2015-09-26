@@ -19,7 +19,7 @@ public class GedcomFileParserTest {
 	@Test
 	public void numberOfRecordsAreExpected() throws IOException {
 		FileParser parser = new GedcomFileParser();
-		List<Entity> entities = parser.parse("GEDCOM Parser Challenge sample data.txt");
+		List<Entity> entities = parser.parse("src/test/resources/GEDCOM Parser Challenge sample data.txt");
 
 		assertThat(entities.size(), equalTo(518));
 		assertThat(entities.get(0).getRecords().size(), equalTo(12));

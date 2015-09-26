@@ -1,7 +1,8 @@
 package com.chatar.gedcom.builder.impl;
 
-import static org.hamcrest.core.IsEqual.equalTo;
-import static org.junit.Assert.*;
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,11 +17,11 @@ import com.chatar.gedcom.util.Assumptions;
 
 public class XmlBuilderTest {
 
-	private static final String PATH = "/Users/chatar/Documents/dev/projects/weekend-hiring3/gedcom.parser/src/test/java/com/chatar/gedcom/builder/impl/";
+	private static final String PATH = "src/test/resources/";
 	private static final String EXPECTED_XML_PATH = PATH + "actual_gedcom_parser.xml"; 
 			
 	@Test(expected = RuntimeException.class)
-	public void test() {
+	public void throwExceptionIfOutputFileIsNull() {
 		FileBuilder xmlBuilder = new XmlBuilder(PATH + Assumptions.XML_FILE_NAME);
 		xmlBuilder.buildFrom(null);
 	}
@@ -30,7 +31,7 @@ public class XmlBuilderTest {
 		XmlBuilder xmlBuilder = new XmlBuilder(PATH + Assumptions.XML_FILE_NAME);
 		String actual = xmlBuilder.buildFrom(entityTree());
 		
-		assertThat(actual, equalTo(PATH + Assumptions.XML_FILE_NAME));
+		assertThat(new File(actual).exists(), is(true));
 		assertTrue(FileUtils.contentEquals(new File(actual), new File(EXPECTED_XML_PATH)));
 	}
 

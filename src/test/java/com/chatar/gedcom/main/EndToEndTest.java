@@ -21,9 +21,9 @@ import com.chatar.gedcom.file.GedcomFileParser;
 
 public class EndToEndTest extends XMLTestCase {
 
-	private static final String INPUT_FILE = "GEDCOM Parser Challenge sample data.txt";
-	private static final String OUTPUT_FILE = "Actual_GEDCOM Parser Challenge sample data.xml";
-	private static final String EXPECTED_OUTPUT_FILE = "Expected_GEDCOM Parser Challenge sample data.xml";
+	private static final String INPUT_FILE = "src/test/resources/GEDCOM Parser Challenge sample data.txt";
+	private static final String OUTPUT_FILE = "src/test/resources/Actual_GEDCOM Parser Challenge sample data.xml";
+	private static final String EXPECTED_OUTPUT_FILE = "src/test/resources/Expected_GEDCOM Parser Challenge sample data.xml";
 	
 	@Test
 	public void testShouldAbleToConvertGivenGedcomFileToXml() throws IOException, SAXException {
