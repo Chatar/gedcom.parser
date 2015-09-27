@@ -15,12 +15,10 @@ public class GedcomTreeBuilder implements TreeBuilder {
 
 	public EntityTree build(List<Entity> entities) {
 		ExceptionThrow.runTimeException("Entities can't be null",entities == null);
-
 		return new EntityTree(Assumptions.ROOT, buildNodesFrom(entities));
 	}
 
 	private List<Node> buildNodesFrom(List<Entity> entities) {
-		
 		List<Node> nodes = new ArrayList<Node>();
 		for (Entity entity : entities) {
 			nodes.add(buildNodeFrom(entity));

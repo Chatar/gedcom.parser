@@ -10,7 +10,7 @@ public class Record {
 	private String[] tokens;
 	
 	public Record(String lineItem) {
-		ExceptionThrow.runTimeException("Line can't be null", lineItem == null, lineItem == null);
+		ExceptionThrow.runTimeException("Line can't be null or empty", lineItem == null || lineItem == "");
 		lineItem = lineItem.trim();
 		this.tokens = lineItem.split(Assumptions.DELIMITER, 3);
 	}

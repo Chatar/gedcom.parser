@@ -31,16 +31,16 @@ public class NodeTest {
 
 	@Test
 	public void shouldAbleToAddLeafNode() {
-		Node node = new Node(3, "dob", "19801111");
+		Node node = new Node(null, 3, "dob", "19801111");
 		
 		assertThat(node.isleaf(), is(true));
 	}
 	
 	private List<Node> childNode() {
 		List<Node> children = new ArrayList<Node>();
-		Node name = new Node(0, "NAME", "Elizabeth Alexandra Mary /Windsor/");
-		Node sex = new Node(0, "SEX", "F");
-		Node birt = new Node(0, "BIRT");
+		Node name = new Node(null, 0, "NAME", "Elizabeth Alexandra Mary /Windsor/");
+		Node sex = new Node(null, 0, "SEX", "F");
+		Node birt = new Node(null, 0, "BIRT", null);
 		children.add(name);
 		children.add(sex);
 		children.add(birt);
