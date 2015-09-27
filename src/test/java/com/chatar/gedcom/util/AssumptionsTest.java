@@ -12,6 +12,8 @@ public class AssumptionsTest {
 		assertThat(Assumptions.DELIMITER, equalTo(" +"));
 		assertThat(Assumptions.FIRST_LEVEL, equalTo(0));
 		assertThat(Assumptions.ROOT, equalTo("gedcom"));
+		assertThat(Assumptions.ID, equalTo("ID"));
+		assertThat(Assumptions.ID_STARTING, equalTo("@"));
 		assertThat(Assumptions.XML_FILE_NAME, equalTo("actual_gedcom_parser.xml"));
 	}
 }
