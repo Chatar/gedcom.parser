@@ -1,0 +1,6 @@
+
+*.class
+
+tmp.xml
+
+target/test-classes/com/chatar/gedcom/util/AssumptionsTest.class
